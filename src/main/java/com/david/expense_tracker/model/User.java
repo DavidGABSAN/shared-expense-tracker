@@ -41,6 +41,11 @@ public class User {
         this.createdAt = LocalDateTime.now();
     }
 
+    @PrePersist
+    public void prePersist() {
+        createdAt = LocalDateTime.now();
+    }
+
     public Long getId() {
         return id;
     }
